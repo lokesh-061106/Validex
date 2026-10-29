@@ -1,8 +1,11 @@
 # Validex SIH26262 — implementation and deployment handoff
 
-**Status as of 30 October 2026**  
-**GitHub:** [lokesh-061106/APPAR-ReconX](https://github.com/lokesh-061106/APPAR-ReconX)  
-**Current branch:** `main`  
+**Status as of 30 October 2026**
+
+**GitHub:** [lokesh-061106/APPAR-ReconX](https://github.com/lokesh-061106/APPAR-ReconX)
+
+**Current branch:** `main`
+
 **Latest implementation commit before this documentation update:** `f5a49ff` (`Prepare production provisioning and deployment routing`)
 
 > Validex is an independent SIH26262 portal model. It is not an official AICTE service and is not endorsed by AICTE. Evaluation records and the external-authority examples are synthetic/simulated. Do not use it for real statutory decisions or confidential institutional records until the production gaps below are resolved.
