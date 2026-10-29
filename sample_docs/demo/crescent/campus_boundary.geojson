@@ -1,0 +1,108 @@
+{
+ "type": "FeatureCollection",
+ "name": "Synthetic campus boundary (demo)",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "role": "campus",
+    "name": "Campus boundary (survey)"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       77.523,
+       28.471
+      ],
+      [
+       77.5250745,
+       28.471
+      ],
+      [
+       77.5250745,
+       28.4728236
+      ],
+      [
+       77.523,
+       28.4728236
+      ],
+      [
+       77.523,
+       28.471
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "role": "building",
+    "name": "Main Block"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       77.5233066,
+       28.4712695
+      ],
+      [
+       77.5238175,
+       28.4712695
+      ],
+      [
+       77.5238175,
+       28.4715839
+      ],
+      [
+       77.5233066,
+       28.4715839
+      ],
+      [
+       77.5233066,
+       28.4712695
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "role": "building",
+    "name": "Lab Block"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       77.5240219,
+       28.4713593
+      ],
+      [
+       77.5244818,
+       28.4713593
+      ],
+      [
+       77.5244818,
+       28.4717186
+      ],
+      [
+       77.5240219,
+       28.4717186
+      ],
+      [
+       77.5240219,
+       28.4713593
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "type": "FeatureCollection",
+ "name": "Synthetic campus boundary (demo)",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "role": "campus",
+    "name": "Campus boundary (survey)"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       77.491,
+       28.456
+      ],
+      [
+       77.493299,
+       28.456
+      ],
+      [
+       77.493299,
+       28.4580212
+      ],
+      [
+       77.491,
+       28.4580212
+      ],
+      [
+       77.491,
+       28.456
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "role": "building",
+    "name": "Academic Block A"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       77.4912044,
+       28.4561797
+      ],
+      [
+       77.4918174,
+       28.4561797
+      ],
+      [
+       77.4918174,
+       28.456539
+      ],
+      [
+       77.4912044,
+       28.456539
+      ],
+      [
+       77.4912044,
+       28.4561797
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "role": "building",
+    "name": "Academic Block B"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       77.4921239,
+       28.4562695
+      ],
+      [
+       77.4926348,
+       28.4562695
+      ],
+      [
+       77.4926348,
+       28.456539
+      ],
+      [
+       77.4921239,
+       28.456539
+      ],
+      [
+       77.4921239,
+       28.4562695
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "role": "building",
+    "name": "Workshop"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       77.4914087,
+       28.457078
+      ],
+      [
+       77.4917152,
+       28.457078
+      ],
+      [
+       77.4917152,
+       28.4572576
+      ],
+      [
+       77.4914087,
+       28.4572576
+      ],
+      [
+       77.4914087,
+       28.457078
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

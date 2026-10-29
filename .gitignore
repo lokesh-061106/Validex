@@ -1,0 +1,49 @@
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.test-tmp/
+.coverage
+htmlcov/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+*.local
+
+# Databases & Local Storage
+*.db
+*.sqlite3
+validex.db
+storage_vault/
+sample_docs/temp/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+!.env.production.example
+
+# Logs & OS Files
+logs/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ML model weights (downloaded on first use) and generated evaluation artefacts
+backend/ml_models/
+ml_models/
+sample_docs/eval/
+sample_docs/lab_photos/*
+!sample_docs/lab_photos/README.md

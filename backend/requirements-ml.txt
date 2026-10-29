@@ -1,0 +1,5 @@
+# Full ML extras (needs ~1.5-2 GB RAM). Install CPU PyTorch first:
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+-r requirements.txt
+easyocr>=1.7              # higher-accuracy OCR for scans and photos
+ultralytics>=8.2          # fallback detector and model export tooling

@@ -1,0 +1,7 @@
+Prototype stack, now consistent
+Backend: FastAPI
+ORM and migrations: SQLAlchemy with Alembic
+Database: PostgreSQL (Docker for local dev)
+Queue: Celery or RQ with Redis for async OCR, CV, and verification jobs
+Frontend: React with Tailwind
+File storage: MinIO or local disk

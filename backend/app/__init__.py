@@ -1,0 +1,1 @@
+# AICTE Validation Platform — Backend

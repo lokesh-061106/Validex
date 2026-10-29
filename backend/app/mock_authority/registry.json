@@ -1,0 +1,169 @@
+{
+  "_comment": "Synthetic issuing-authority records for the prototype demo. Not real data.",
+  "authorities": {
+    "fire_services": {
+      "name": "State Fire & Emergency Services (simulated)",
+      "records": {
+        "DFS/HQ/2024/NOC-98421": {
+          "holder": "Apex Institute of Technology & Engineering",
+          "premises": "Knowledge Park III, Greater Noida 201310",
+          "issue_date": "2024-01-10",
+          "valid_until": "2027-12-31"
+        },
+        "DFS/HQ/2022/NOC-44102": {
+          "holder": "Zenith College of Engineering & Research",
+          "premises": "Sector 62, Noida 201309",
+          "issue_date": "2022-03-16",
+          "valid_until": "2025-03-15"
+        },
+        "DFS/HQ/2023/NOC-61177": {
+          "holder": "Crescent Institute of Technology",
+          "premises": "Techzone IV, Greater Noida 201318",
+          "issue_date": "2023-07-01",
+          "valid_until": "2028-06-30"
+        }
+      }
+    },
+    "icai_udin": {
+      "name": "ICAI UDIN Verification Portal (simulated)",
+      "records": {
+        "26054321BKAPEX1234": {
+          "firm": "R. Sharma & Associates",
+          "membership_no": "054321",
+          "client": "Apex Institute of Technology & Engineering",
+          "financial_year": "2025-2026",
+          "document": "Audited financial statements"
+        },
+        "26112233CRESC56789": {
+          "firm": "Mehta Gupta & Co.",
+          "membership_no": "112233",
+          "client": "Crescent Institute of Technology",
+          "financial_year": "2025-2026",
+          "document": "Audited financial statements"
+        }
+      }
+    },
+    "land_records": {
+      "name": "DigiLocker / State Land Records (simulated)",
+      "records": {
+        "REG-DEED-2021-98124": {
+          "owner": "Apex Educational & Research Foundation Trust",
+          "area_acres": 12.5,
+          "survey_numbers": "142/1, 142/2",
+          "encumbrance": "Clear title"
+        },
+        "REG-DEED-2019-55310": {
+          "owner": "Crescent Education Society",
+          "area_acres": 10.2,
+          "survey_numbers": "77/4",
+          "encumbrance": "Clear title"
+        }
+      }
+    },
+    "university_noc": {
+      "name": "Affiliating University NOC Register (simulated)",
+      "records": {
+        "AKTU/NOC/2026/1187": {
+          "institution": "Apex Institute of Technology & Engineering",
+          "university": "Dr. A.P.J. Abdul Kalam Technical University",
+          "issue_date": "2026-06-01",
+          "valid_until": "2027-05-31"
+        },
+        "AKTU/NOC/2024/0932": {
+          "institution": "Zenith College of Engineering & Research",
+          "university": "Dr. A.P.J. Abdul Kalam Technical University",
+          "issue_date": "2024-06-01",
+          "valid_until": "2025-05-31"
+        },
+        "AKTU/NOC/2026/1290": {
+          "institution": "Crescent Institute of Technology",
+          "university": "Dr. A.P.J. Abdul Kalam Technical University",
+          "issue_date": "2026-06-01",
+          "valid_until": "2027-05-31",
+          "simulate": "pending"
+        }
+      }
+    },
+    "estamp": {
+      "name": "e-Stamp Registry (simulated)",
+      "records": {
+        "IN-UP98421054231801": {
+          "party": "Apex Institute of Technology & Engineering",
+          "issue_date": "2026-01-15",
+          "amount": 100
+        },
+        "IN-UP77120931188402": {
+          "party": "Zenith College of Engineering & Research",
+          "issue_date": "2026-01-20",
+          "amount": 100
+        },
+        "IN-UP55500011120003": {
+          "party": "Crescent Institute of Technology",
+          "issue_date": "2026-02-02",
+          "amount": 100
+        }
+      }
+    }
+  },
+  "aicte_institutions": {
+    "1-2345678901": {
+      "name": "Apex Institute of Technology & Engineering",
+      "trust": "Apex Educational & Research Foundation Trust",
+      "state": "Uttar Pradesh",
+      "pincode": "201310",
+      "approved_intake": 360,
+      "faculty_on_record": 72,
+      "land_area_acres": 12.5,
+      "ter_payment": {
+        "2026-2027": "paid"
+      },
+      "previous_eoa": [
+        {
+          "year": "2025-2026",
+          "status": "approved"
+        }
+      ],
+      "open_deficiencies": []
+    },
+    "1-9876543210": {
+      "name": "Zenith College of Engineering & Research",
+      "trust": "Zenith Education Trust",
+      "state": "Uttar Pradesh",
+      "pincode": "201309",
+      "approved_intake": 300,
+      "faculty_on_record": 11,
+      "land_area_acres": 8.0,
+      "ter_payment": {
+        "2026-2027": "unpaid"
+      },
+      "previous_eoa": [
+        {
+          "year": "2025-2026",
+          "status": "approved_with_conditions"
+        }
+      ],
+      "open_deficiencies": [
+        "Fire NOC renewal pending (2025-26 Expert Visit Committee report)"
+      ]
+    },
+    "1-5550001112": {
+      "name": "Crescent Institute of Technology",
+      "trust": "Crescent Education Society",
+      "state": "Uttar Pradesh",
+      "pincode": "201318",
+      "approved_intake": 240,
+      "faculty_on_record": 48,
+      "land_area_acres": 10.2,
+      "ter_payment": {
+        "2026-2027": "paid"
+      },
+      "previous_eoa": [
+        {
+          "year": "2025-2026",
+          "status": "approved"
+        }
+      ],
+      "open_deficiencies": []
+    }
+  }
+}

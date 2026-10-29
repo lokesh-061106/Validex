@@ -1,0 +1,30 @@
+# Render deployment blueprint. Configure production data, official account onboarding,
+# authorized authority providers, and the matching frontend origin before public operation.
+services:
+  - type: web
+    name: validex-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: singapore
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: USE_MINIO
+        value: "false"
+      - key: CORS_ORIGINS
+        value: https://validex-two.vercel.app
+      - key: DATABASE_URL
+        fromDatabase:
+          name: validex-db
+          property: connectionString
+
+databases:
+  - name: validex-db
+    databaseName: aicte_validation
+    user: aicte
+    plan: free
+    region: singapore
