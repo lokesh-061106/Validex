@@ -59,7 +59,7 @@ SMTP is optional (`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_
 
 The development-only administrative QR test endpoint returns a genuine QR PNG containing an Ed25519-signed payload and the server's verification result. It uses deterministic synthetic issuer keys, returns a non-official label, and is disabled in production. Document upload verification separately decodes QR images from evidence and checks signatures server-side. No official issuer authority is implied; configure approved issuer keys and credentials before an issuer integration.
 
-See [REPOSITORY_AUDIT.md](REPOSITORY_AUDIT.md) and [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for phase status and verified limitations.
+See [DEPLOYMENT_HANDOFF.md](DEPLOYMENT_HANDOFF.md) for the full implementation record, deployment runbook, mobile installation instructions, test results, and remaining work. See [REPOSITORY_AUDIT.md](REPOSITORY_AUDIT.md) and [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for phase status and verified limitations.
 
 Processing pipeline per document (silent to institutions):
 `watermark + manifest → store (MinIO) → recover original → OCR → classify → extract fields → locate fields → forensics → duplicates → QR + registry verification` (lab photos and videos go to the CV stage, campus boundaries to spatial verification, faculty lists and asset registers into the collusion graph).

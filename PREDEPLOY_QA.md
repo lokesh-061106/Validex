@@ -1,6 +1,6 @@
 # Validex pre-deployment QA
 
-Run date: 29 October 2026
+Run date: 30 October 2026 (documentation/status update)
 
 ## Results
 
@@ -19,7 +19,7 @@ Run date: 29 October 2026
 - A production preview server could not be reached from the sandbox due local socket restrictions; therefore browser service-worker registration and install prompting were not independently confirmed. Static PWA output was confirmed in `frontend/dist`.
 - The included Render blueprint currently uses free service/database plans and local file storage. It must be upgraded/configured with persistent storage and backups before handling confidential institutional records.
 - A full API integration run remains unverified because the TestClient startup stalls. Four database-dependent cases were excluded from the passing focused suite.
-- The source is pushed to GitHub, but the public app was not updated. Vercel and Render were signed out when checked. GitHub Actions reported success while skipping checkout/build/push because the Hugging Face deployment variables/secrets are absent. The existing public URL may still serve the earlier build.
+- The source is pushed to GitHub, but a new public app deployment has not been verified. The Vercel import flow has been opened for this repository; the Render API/database and final Vercel production URL still need to be created and checked. GitHub Actions reported success while skipping checkout/build/push because the Hugging Face deployment variables/secrets are absent. The existing public URL may still serve the earlier build.
 - No app-store package was produced; the mobile deliverable is a Progressive Web App installable through supported browsers.
 - Real external authority checks, email delivery, push delivery, and statutory decision authority require organization-managed integrations and credentials. Synthetic evaluation records and simulated authority sources must not be represented as official data or completed external verification.
 
