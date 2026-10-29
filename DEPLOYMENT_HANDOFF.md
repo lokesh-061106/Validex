@@ -2,7 +2,7 @@
 
 **Status as of 30 October 2026**
 
-**GitHub:** [lokesh-061106/APPAR-ReconX](https://github.com/lokesh-061106/APPAR-ReconX)
+**GitHub:** [lokesh-061106/Validex](https://github.com/lokesh-061106/Validex)
 
 **Current branch:** `main`
 
@@ -47,7 +47,7 @@ The mobile deliverable in this repository is an installable **Progressive Web Ap
 
 - Initial project upload: `459d20e` — `Publish Validex SIH26262 portal model`.
 - Production provisioning and API route setup: `f5a49ff` — `Prepare production provisioning and deployment routing`.
-- Source repository: [GitHub](https://github.com/lokesh-061106/APPAR-ReconX).
+- Source repository: [GitHub](https://github.com/lokesh-061106/Validex).
 - Requirement mapping: [PS62_REQUIREMENT_MAPPING.md](PS62_REQUIREMENT_MAPPING.md).
 - Latest pre-deployment checks and limitations: [PREDEPLOY_QA.md](PREDEPLOY_QA.md).
 - Environment template: [.env.production.example](.env.production.example).
@@ -95,7 +95,7 @@ The full backend test suite must still be run in a stable database/TestClient en
 
 The blueprint is in the repository root as `render.yaml`. Render's Blueprint flow reads that file from the selected Git branch. Official Render documentation: [Blueprints](https://render.com/docs/infrastructure-as-code), [Blueprint specification](https://render.com/docs/blueprint-spec), and [environment variables](https://render.com/docs/configure-environment-variables).
 
-1. Sign in to Render with the GitHub account that can access `lokesh-061106/APPAR-ReconX`.
+1. Sign in to Render with the GitHub account that can access `lokesh-061106/Validex`.
 2. Select **New → Blueprint** and choose this repository and the `main` branch.
 3. Review the resources from `render.yaml`. The service is named `validex-appar-reconx-api`; the database is `validex-appar-reconx-db`. Render may append a suffix if those resource names already exist in the workspace.
 4. Keep `ENVIRONMENT=production`. Render generates `SECRET_KEY` and links `DATABASE_URL` to the PostgreSQL resource.
@@ -114,7 +114,7 @@ The checked-in blueprint currently chooses free plans and sets `USE_MINIO=false`
 
 The user-visible Vercel import flow is the next frontend step. Official documentation: [Deploying Git repositories](https://vercel.com/docs/git) and [Build configuration](https://vercel.com/docs/builds/configure-a-build).
 
-1. In Vercel, import `lokesh-061106/APPAR-ReconX` from GitHub and select branch `main`.
+1. In Vercel, import `lokesh-061106/Validex` from GitHub and select branch `main`.
 2. Set **Root Directory** to `frontend` (not the repository root).
 3. Use **Framework Preset: Vite**, **Install Command: `npm ci`**, **Build Command: `npm run build`**, and **Output Directory: `dist`**. Vercel can auto-detect some of these; verify the values before deploying.
 4. No `VITE_API_URL` is required for this setup. `frontend/vercel.json` proxies `/api/:path*` to the Render API and serves the React SPA for other routes.
