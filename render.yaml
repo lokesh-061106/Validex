@@ -2,7 +2,7 @@
 # authorized authority providers, and the matching frontend origin before public operation.
 services:
   - type: web
-    name: validex-api
+    name: validex-appar-reconx-api
     runtime: docker
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
@@ -16,14 +16,20 @@ services:
       - key: USE_MINIO
         value: "false"
       - key: CORS_ORIGINS
-        value: https://validex-two.vercel.app
+        sync: false
+      - key: BOOTSTRAP_ADMIN_EMAIL
+        sync: false
+      - key: BOOTSTRAP_ADMIN_PASSWORD
+        sync: false
+      - key: BOOTSTRAP_ADMIN_NAME
+        value: Portal Administrator
       - key: DATABASE_URL
         fromDatabase:
-          name: validex-db
+          name: validex-appar-reconx-db
           property: connectionString
 
 databases:
-  - name: validex-db
+  - name: validex-appar-reconx-db
     databaseName: aicte_validation
     user: aicte
     plan: free

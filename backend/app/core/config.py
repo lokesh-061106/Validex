@@ -46,6 +46,10 @@ class Settings(BaseSettings):
     SECRET_KEY: str = DEFAULT_SECRET
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
+    # Optional one-time first administrator provisioning for an empty production database.
+    BOOTSTRAP_ADMIN_EMAIL: str = ""
+    BOOTSTRAP_ADMIN_PASSWORD: str = ""
+    BOOTSTRAP_ADMIN_NAME: str = "Portal Administrator"
 
     # Uploads
     MAX_UPLOAD_MB: int = 25

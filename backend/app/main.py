@@ -14,6 +14,7 @@ from app.core.security import hash_password, verify_password
 from app.mock_authority.service import router as mock_authority_router
 from app.models.user import User, UserRole
 from app.services.compliance_service import compliance_service
+from app.services.audit_service import audit_service
 from app.services.workflow_service import seed_default_transitions
 
 logging.basicConfig(level=logging.INFO)
@@ -45,10 +46,37 @@ def init_db():
                     # Upgrade demo accounts created with an older hashing scheme
                     user.hashed_password = hash_password(password)
             db.commit()
+        else:
+            bootstrap_production_admin(db)
         compliance_service.seed_default_rules(db)
         seed_default_transitions(db)
     finally:
         db.close()
+
+
+def bootstrap_production_admin(db) -> bool:
+    """Create the first admin only from explicitly configured credentials on an empty DB."""
+    email = settings.BOOTSTRAP_ADMIN_EMAIL.strip().lower()
+    password = settings.BOOTSTRAP_ADMIN_PASSWORD
+    if not email and not password:
+        return False
+    if not email or not password:
+        raise RuntimeError("Both BOOTSTRAP_ADMIN_EMAIL and BOOTSTRAP_ADMIN_PASSWORD are required together")
+    if "@" not in email or len(password) < 16:
+        raise RuntimeError("Bootstrap email must be valid and bootstrap password must be at least 16 characters")
+    if db.query(User).count() > 0:
+        logger.info("Administrator bootstrap skipped because the users table is not empty")
+        return False
+
+    user = User(email=email, hashed_password=hash_password(password),
+                full_name=settings.BOOTSTRAP_ADMIN_NAME.strip() or "Portal Administrator",
+                role=UserRole.ADMIN, institution_name="Portal Administration")
+    db.add(user)
+    db.flush()
+    audit_service.log_event(db=db, action="INITIAL_ADMIN_BOOTSTRAPPED", user_id=user.id,
+                            actor_role="system", details={"method": "one-time deployment environment configuration"})
+    logger.info("Initial administrator bootstrapped. Remove bootstrap credentials from deployment settings.")
+    return True
 
 
 @asynccontextmanager

@@ -106,6 +106,8 @@ celery -A app.core.celery_app.celery beat --loglevel=INFO
 
 Celery beat retries authority checks and evaluates deadlines every five minutes. Set SMTP environment values only for a server you are authorized to use. No external credentials are required for local startup; `.env.example` lists available settings. Production requires a strong `SECRET_KEY` and production database/storage configuration; evaluation accounts are not seeded in production.
 
+For a new production database, set `BOOTSTRAP_ADMIN_EMAIL` and a unique `BOOTSTRAP_ADMIN_PASSWORD` (minimum 16 characters) in the hosting provider's secret settings. The backend creates this first administrator only when the users table is empty, writes an audit event, and logs no credential values. Remove both bootstrap variables after the first successful startup. The Render blueprint marks them as provider-managed settings.
+
 ### Docker
 
 ```bash
@@ -139,6 +141,8 @@ requires a Hugging Face PRO subscription.
 Evaluation accounts are seeded only when `ENVIRONMENT` is not `production`.
 
 These credentials are for local/non-production evaluation only. Production deployments must use real institution and official accounts created through an authorized onboarding process.
+
+The included Render blueprint uses a free service/database and local file storage defaults to make deployment configuration reproducible. Free plans can sleep and their database/storage choices are not appropriate for confidential institutional records. Configure paid persistent database and object storage (MinIO or an S3-compatible service), retention, backups, and approved identity/authority providers before accepting real records.
 
 ## Mobile access
 
